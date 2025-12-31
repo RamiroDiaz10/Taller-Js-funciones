@@ -1,4 +1,4 @@
-import { agregarPropiedad, aprobados, buscarElemento, calcularRectangulo, combinarObjetos, contarPares, contarPropiedades, invertirArray, mejorEstudiante, numeroMayor, promedioNotas, sumarArray } from "./funciones.js";
+import { agregarPropiedad, aprobados, buscarElemento, calcularRectangulo, combinarObjetos, contarPares, contarPropiedades, eliminarDuplicados, invertirArray, mejorEstudiante, numeroMayor, ordenarArray, promedioNotas, sumarArray } from "./funciones.js";
 
 
 const sumNumbers = [1,2,3,4,5,6,7];                //01
@@ -41,6 +41,8 @@ const student = [
     {name: 'juan', nota: 20},
     {name: 'omar', nota: 90}
 ]
+const repeat = [2,1,2,3,4,3,5,4]                                //13
+const order = [ 8,3,9,4,6,1,5]                                  //14
 
 
     
@@ -59,3 +61,5 @@ console.log(combinarObjetos(oneObject, twoObject));
 console.log(contarPropiedades(dates));
 console.log(calcularRectangulo( broad, high ))
 console.log(mejorEstudiante(student));
+console.log(eliminarDuplicados(repeat));
+console.log(ordenarArray(order));

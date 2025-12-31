@@ -82,7 +82,26 @@ function mejorEstudiante (array){
 } 
 //13. eliminar elementos duplicados de un array
 function eliminarDuplicados (array) {
+    return array.filter(( num, index) => {
+        return array.indexOf(num) === index;
+    })
 
+    //    return [...new Set(array)];
+}
+//14.ordenar array de numeros
+function ordenarArray (array){
+    let list = array.length;
+    for ( let i=0; i<list-1; i++){
+        for( let k=0; k<list-1-i; k++){
+            if( array[k] > array[ k+1 ] ){
+                let resultado = array[k];
+                array[k] = array[ k+1 ];
+                array[ k+1 ] = resultado;
+            };
+        };
+    };
+    // array.sort((a, b) => a - b);
+    return array;
 }
 
 
@@ -100,4 +119,5 @@ export {
     calcularRectangulo,
     mejorEstudiante,
     eliminarDuplicados,
+    ordenarArray,
 } 
