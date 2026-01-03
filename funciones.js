@@ -103,6 +103,73 @@ function ordenarArray (array){
     // array.sort((a, b) => a - b);
     return array;
 }
+// 15. Validar contraseña:
+function ValidarContrasena (contrasena) {
+
+    let tieneMayuscula = false;
+    let tieneNumero = false;
+    let minCaracteres = false;
+
+    for (let pass of contrasena ) {
+        if( pass >= 'A' && pass <= 'Z' ) {                //unicode
+            tieneMayuscula = true;
+        }
+        if( contrasena.length >= 8 ){
+            minCaracteres = true;
+        }
+
+        if( pass >= '0' && pass <= '9' ) {                            
+            tieneNumero = true;
+            
+        } 
+           
+    }
+    
+    return tieneMayuscula && minCaracteres && tieneNumero;
+
+//     const reglas = [
+//     { ok: /[A-Z]/.test(contrasena), msg: "Debe tener al menos una mayúscula" },   .......version ia: primero atacar reglas o errores y luego proceso
+//     { ok: /[0-9]/.test(contrasena), msg: "Debe tener al menos un número" },
+//     { ok: contrasena.length >= 8,  msg: "Debe tener al menos 8 caracteres" }
+//   ];
+
+//   const errores = reglas.filter(r => !r.ok).map(r => r.msg);
+
+//   if (errores.length) {
+//     errores.forEach(e => console.log(e));
+//     return false;
+//   }
+
+//   console.log("Contraseña válida ");
+//   return true;
+
+}
+// 16. Calcular factorial:
+function factorial (numero){
+    let resultado = 1;
+    for( let i=1; i<=numero; i++ ){
+        resultado *= i;
+    }
+    return resultado;
+    
+
+}
+// 17. Generar tabla de multiplicar:
+function tablaMultiplicar(num){
+    let i = 1;
+    while (i <= 10) {
+
+    console.log(`${num} x ${i} = ${num*i}`);
+    
+    i++; 
+    }
+    return;
+}
+// 18. Contar vocales en un string:
+function contarVocales (texto){
+
+}
+
 
 
 export {
@@ -120,4 +187,8 @@ export {
     mejorEstudiante,
     eliminarDuplicados,
     ordenarArray,
+    ValidarContrasena,
+    factorial,
+    tablaMultiplicar,
+    contarVocales,
 } 
