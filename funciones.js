@@ -168,7 +168,7 @@ function tablaMultiplicar(num){
 // 18. Contar vocales en un string:
 function contarVocales (texto){
     let resultado = [];
-    let array = [...texto.toLowerCase()];
+    let array = [...texto.toLowerCase()]; // para convertir todo en minuscula y que cuente todoas las vocales asi esten en mayusculas.
     array.forEach( text =>{
         if(text === 'a'){
             resultado.push(text);
@@ -188,7 +188,7 @@ function contarVocales (texto){
         
     });
 
-    let si = [...new Set(resultado)];
+    let si = [...new Set(resultado)]; // contar vocales pero sin repetidas
 
     return si.length; 
 
@@ -218,7 +218,11 @@ function calcularImpuestos (saldos, impuesto){
 }
 //20. Simulador de carrito de compras:
 function totalCarrito(carrito){
-    
+    let subtotal = carrito.map(num => num.precio*num.cantidad*num.descuento);
+    let total = subtotal.reduce( (result, actual ) => result += actual, 0 );
+    let totalProducto = carrito.reduce((total, actual) => total + actual.cantidad, 0 )
+    console.log(`Total cantidad productos: ${totalProducto}\nPrecio total de cada producto: ${subtotal}\nTotal a pagar: ${total}`);
+    return;
 }
 
 
