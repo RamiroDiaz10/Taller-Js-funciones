@@ -163,13 +163,63 @@ function tablaMultiplicar(num){
     
     i++; 
     }
-    return;
+    
 }
 // 18. Contar vocales en un string:
 function contarVocales (texto){
+    let resultado = [];
+    let array = [...texto.toLowerCase()];
+    array.forEach( text =>{
+        if(text === 'a'){
+            resultado.push(text);
+        }
+        if(text === 'e'){
+            resultado.push(text);
+        }
+        if(text === 'i'){
+            resultado.push(text);
+        }
+        if(text === 'o'){
+            resultado.push(text);
+        }
+        if(text === 'u'){
+            resultado.push(text);
+        }
+        
+    });
+
+    let si = [...new Set(resultado)];
+
+    return si.length; 
 
 }
+//...............version que busque en la ia para mejorarla
+// function contarVocales(texto) {
+//   const vocales = "aeiouáéíóú";
+//   let contador = 0;
 
+//   for (let c of texto.toLowerCase()) {
+//     if (vocales.includes(c)) {
+//       contador++;
+//     }
+//   }
+
+//   return contador;
+// }
+
+// 19. Calcular impuestos:
+function calcularImpuestos (saldos, impuesto){
+    return saldos.map(num => num.saldo*impuesto ) //devuelve solo el impuesto del saldo...
+
+    // return saldos.forEach( (num) => {                                 //devuelve nombre e impuesto pero string.
+    //     console.log(`impuesto de: ${num.name}: ${num.saldo*impuesto}`)
+    // });
+    
+}
+//20. Simulador de carrito de compras:
+function totalCarrito(carrito){
+    
+}
 
 
 export {
@@ -191,4 +241,6 @@ export {
     factorial,
     tablaMultiplicar,
     contarVocales,
+    calcularImpuestos,
+    totalCarrito
 } 

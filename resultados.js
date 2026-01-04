@@ -1,4 +1,4 @@
-import { agregarPropiedad, aprobados, buscarElemento, calcularRectangulo, combinarObjetos, contarPares, contarPropiedades, contarVocales, eliminarDuplicados, factorial, invertirArray, mejorEstudiante, numeroMayor, ordenarArray, promedioNotas, sumarArray, tablaMultiplicar, ValidarContrasena } from "./funciones.js";
+import { agregarPropiedad, aprobados, buscarElemento, calcularImpuestos, calcularRectangulo, combinarObjetos, contarPares, contarPropiedades, contarVocales, eliminarDuplicados, factorial, invertirArray, mejorEstudiante, numeroMayor, ordenarArray, promedioNotas, sumarArray, tablaMultiplicar, totalCarrito, ValidarContrasena } from "./funciones.js";
 
 
 const sumNumbers = [1,2,3,4,5,6,7];                //01
@@ -43,11 +43,27 @@ const student = [
 ]
 const repeat = [2,1,2,3,4,3,5,4]                                //13
 const order = [ 8,3,9,4,6,1,5]                                  //14
-// const password = prompt('ingresa tu contrasena(al menos un numero, una mayuscula y minimo 8 caracteres): ');   //15
+const password = prompt('ingresa tu contrasena(al menos un numero, una mayuscula y minimo 8 caracteres): ');   //15
 const fact = Number(prompt('ingrese numero para sacar factorial n!: '));        //16
 const multi = Number(prompt('ingrese numero para sacar tabla de multiplicar: ')); //17
-const vocal = 'Ramiro'                                      //18
-    
+const vocal = 'holAaPe'                                      //18
+//...........................................................//19
+const employed = [
+    { name:'jose', saldo: 2000 },
+    { name:'Raul', saldo: 5000 },
+    { name:'Rita', saldo: 8000 },
+    { name:'Rodri', saldo: 3000 }
+]   
+const iva = 0.2;
+//........................................................... 
+const totalCar = [                                           //20
+    {producto:'manzana', precio: 2000, cantidad:3, descuento: 0.9},
+    {producto:'pera', precio: 5000, cantidad:6, descuento: 0.8},
+    {producto:'papa', precio: 3000, cantidad:7, descuento: 0.9}
+
+]
+
+
 
 
 
@@ -65,7 +81,9 @@ console.log(calcularRectangulo( broad, high ))
 console.log(mejorEstudiante(student));
 console.log(eliminarDuplicados(repeat));
 console.log(ordenarArray(order));
-// console.log(ValidarContrasena(password));
+console.log(ValidarContrasena(password));
 console.log(factorial(fact));
 console.log(tablaMultiplicar(multi));
 console.log(contarVocales(vocal));
+console.log(calcularImpuestos(employed, iva));
+console.log(totalCarrito(totalCar));
